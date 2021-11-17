@@ -16,8 +16,17 @@
 	</div>
 
 	<div class="form-group">
-		<label for="type">Serie</label>
-		<input type="text" class="form-control" id="type" name="type" placeholder="Insersci la serie" value="{{ old('series') }}">
+		<label for="series">Serie</label>
+		<input type="text" class="form-control" id="series" name="series" placeholder="Insersci la serie" value="{{ old('series') }}">
+
+		@error('series')
+			<div class="alert alert-danger">{{ $message }}</div>
+		@enderror
+	</div>
+
+	<div class="form-group">
+		<label for="type">Tipo</label>
+		<input type="text" class="form-control" id="type" name="cooking_time" placeholder="Insersci il tipo" value="{{ old('type') }}">
 
 		@error('type')
 			<div class="alert alert-danger">{{ $message }}</div>
@@ -25,19 +34,10 @@
 	</div>
 
 	<div class="form-group">
-		<label for="cooking_time">Tipo</label>
-		<input type="text" class="form-control" id="cooking_time" name="cooking_time" placeholder="Insersci il tipo" value="{{ old('type') }}">
+		<label for="price">Prezzo</label>
+		<input type="number" class="form-control" id="price" name="price" placeholder="Insersci il prezzo" value="{{ old('prezzo') }}">
 
-		@error('cooking_time')
-			<div class="alert alert-danger">{{ $message }}</div>
-		@enderror
-	</div>
-
-	<div class="form-group">
-		<label for="weight">Prezzo</label>
-		<input type="number" class="form-control" id="weight" name="weight" placeholder="Insersci il prezzo" value="{{ old('prezzo') }}">
-
-		@error('cooking_time')
+		@error('price')
 			<div class="alert alert-danger">{{ $message }}</div>
 		@enderror
 	</div>
@@ -53,7 +53,7 @@
 
 	<div class="form-group">
 		<label for="image">Immagine</label>
-		<input type="text" class="form-control" id="image" name="image" placeholder="Insersci l'url dell'immagine" value="{{ old('thumb') }}">
+		<input type="text" class="form-control" id="image" name="iamge" placeholder="Insersci l'url dell'immagine" value="{{ old('thumb') }}">
 
 		@error('image')
 			<div class="alert alert-danger">{{ $message }}</div>
