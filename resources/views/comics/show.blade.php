@@ -2,7 +2,7 @@
 
 @section('pageContent')
 
-<img src="{{asset($comic["thumb"])}}" alt="fumetto">
+<img src="{{$comic["image"]}}" alt="fumetto">
 <h1>{{$comic["title"]}}</h1>
 
 <p>
